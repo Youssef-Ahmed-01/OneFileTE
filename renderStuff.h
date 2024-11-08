@@ -110,6 +110,11 @@ void handleUserInput(SDL_Event* event, int* close, char* inputText, int* cursorI
                     case SDLK_DOWN:
                         *cursorPosY += 30;
                         break;
+
+                }
+                if ((SDL_GetModState() & KMOD_CTRL) && event->key.keysym.sym == SDLK_s){
+                        writeFileFromString("text", inputText);
+
                 }
                 break;
 

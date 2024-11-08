@@ -13,6 +13,7 @@ int main(void) {
     SDL_Event event;
 
     char inputText[MAX_TEXT_LENGTH] = {0};
+    readFileToString("text",inputText, MAX_TEXT_LENGTH);
 
     SDL_StartTextInput();
 
