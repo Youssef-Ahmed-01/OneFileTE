@@ -9,7 +9,7 @@ simple, lightweight and no cursor text editor using SDL in C
 
 ## Usage
 
-  **clone and make**
+1.  **clone and make**
     ```terminal/bash
     make -B
     ./OneFile
