@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-void readFileToString(const char* filename, char* buffer, size_t bufferSize) {
+void readFileToString(const char* filename, char* buffer,size_t bufferSize) {
     FILE* fp = fopen(filename, "r");
     if (fp == NULL) {
         perror("Unable to open file for reading");
         exit(1);
     }
-
     size_t bytesRead = fread(buffer, 1, bufferSize - 1, fp); 
     buffer[bytesRead] = '\0';
+    printf("%s\n", buffer);
     fclose(fp);
 }
 
@@ -21,6 +21,6 @@ void writeFileFromString(const char* filename, const char* buffer) {
         exit(1);
     }
 
-    fwrite(buffer, 1, strlen(buffer), fp);  
+    fwrite(buffer, 1, strlen(buffer), fp); 
     fclose(fp);
 }
